@@ -8,11 +8,13 @@ function clicks() {
         missed.textContent ++;
     }
 
-    if (killed.textContent > 10) {
+    if (Number(killed.textContent) === 10) {
         alert("Вы победили");
+        killed.textContent = 0;
     }
-    else if (missed.textContent > 5) {
+    else if (missed.textContent === 5) {
         alert("Вы проиграли");
+        missed.textContent = 0;
     }
 }
 hole1.onclick = clicks;
